@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">VeterinariaTP</string>
+    <string name="registre_su_mascota">Registre su mascota</string>
+    <string name="nombre_de_la_mascota">Nombre de la mascota</string>
+    <string name="seleccione_que_animal_es">Seleccione que animal es:</string>
+    <string name="indique_raza_de_mascota">Indique raza de mascota</string>
+    <string name="ingrese_edad">Ingrese edad:</string>
+    <string name="edad_default">0</string>
+    <string name="describa_la_causa">Describa la causa</string>
+    <string name="registrar">Registrar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="registrar_diagnostico">Registrar diagnostico</string>
+    <string name="diagnostic_nombre_label">Nombre:</string>
+    <string name="diag_tipo_lbl">Tipo:</string>
+    <string name="diag_raza_lbl">Raza:</string>
+    <string name="diag_edad_lbl">Edad:</string>
+    <string name="diag_cause_lbl">Sintomas:</string>
+    <string name="diag_result_lbl">Ingrese diagnostico:</string>
+    <string name="ingresar_mascota_btn">Ingresar Mascota</string>
+    <string name="registrar_diagnostico_btn">Registrar diagnostico</string>
+    <string-array name="types_animals">
+        <item>Perro</item>
+        <item>Gato</item>
+        <item>Conejo</item>
+        <item>Suegra</item>
+        <item>Otro</item>
+    </string-array>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/regTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="@string/registre_su_mascota"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/regNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/nombre_de_la_mascota"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/regTypeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/seleccione_que_animal_es"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/regTypeOpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/regRaze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/indique_raza_de_mascota"
+            android:inputType="textPersonName"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <TextView
+            android:id="@+id/regAgeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/ingrese_edad" />
+
+        <EditText
+            android:id="@+id/regAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/edad_default"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/regDescripLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text="@string/describa_la_causa" />
+
+        <EditText
+            android:id="@+id/regDescrip"
+            android:layout_width="382dp"
+            android:layout_height="119dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/describa_la_causa"
+            android:inputType="textMultiLine"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/regBtnConfirm"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right|left"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="303dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/registrar"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/regBtnCancel"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/cancelar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
