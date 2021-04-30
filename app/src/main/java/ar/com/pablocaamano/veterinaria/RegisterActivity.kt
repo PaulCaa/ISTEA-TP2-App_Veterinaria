@@ -18,6 +18,8 @@ class RegisterActivity : AppCompatActivity() {
     lateinit var regBtn: Button;
     lateinit var cancelBtn: Button;
 
+    private val PET_KEY: String = "pet";
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
@@ -99,7 +101,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun <T>goToActivity(context: Context, view: Class<T>, petParam: Animal?) {
         val intent: Intent = Intent(context,view);
         if(petParam != null) {
-            intent.putExtra("pet", petParam);
+            intent.putExtra(PET_KEY, petParam);
         }
         startActivity(intent);
     }

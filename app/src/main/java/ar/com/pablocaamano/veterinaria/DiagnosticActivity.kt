@@ -24,14 +24,16 @@ class DiagnosticActivity : AppCompatActivity() {
 
     lateinit var p: Animal;
 
+    private val PET_KEY: String = "pet";
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diagnostic);
 
         initializeElems();
 
-        if(intent.getSerializableExtra("pet") != null) {
-            this.p = intent.getSerializableExtra("pet") as Animal;
+        if(intent.getSerializableExtra(PET_KEY) != null) {
+            this.p = intent.getSerializableExtra(PET_KEY) as Animal;
             Toast.makeText(this, p.name.toString(), Toast.LENGTH_LONG).show();
             this.name.text = p.name;
             this.type.text = p.type;
@@ -75,7 +77,7 @@ class DiagnosticActivity : AppCompatActivity() {
     private fun <T>goToActivity(context: Context, view: Class<T>, petParam: Animal?) {
         val intent: Intent = Intent(context,view);
         if(petParam != null) {
-            intent.putExtra("pet", petParam);
+            intent.putExtra(PET_KEY, petParam);
         }
         startActivity(intent);
     }

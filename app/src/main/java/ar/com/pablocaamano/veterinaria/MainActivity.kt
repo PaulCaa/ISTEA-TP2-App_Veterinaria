@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var pets: List<Animal>;
     lateinit var p: Animal;
 
+    private val PET_KEY: String = "pet";
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -25,12 +27,12 @@ class MainActivity : AppCompatActivity() {
         initializeElems();
 
         btIngress.setOnClickListener(View.OnClickListener {
-            if(this.pets.size < 2) this.goToActivity(this,RegisterActivity::class.java);
+            if(this.pets.size < 5) this.goToActivity(this,RegisterActivity::class.java);
             else Toast.makeText(this, "Se alcanzó el máximo de mascotas registradas", Toast.LENGTH_LONG).show();
         });
 
-        if(intent.getSerializableExtra("pet") != null) {
-            this.p = intent.getSerializableExtra("pet") as Animal;
+        if(intent.getSerializableExtra(PET_KEY) != null) {
+            this.p = intent.getSerializableExtra(PET_KEY) as Animal;
             this.pets += p;
         }
 
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     private fun <T>goToActivity(context: Context, view: Class<T>, petParam: Animal?) {
         val intent: Intent = Intent(context,view);
         if(petParam != null) {
-            intent.putExtra("pet", petParam);
+            intent.putExtra(PET_KEY, petParam);
         }
         startActivity(intent);
     }
